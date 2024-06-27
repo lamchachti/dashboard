@@ -1,86 +1,56 @@
-<h2 class="font-bold">Tasks</h2>
-<div class="flex justify-end">
-    <button class="group relative h-12 w-48 overflow-hidden rounded-2xl bg-blue-400 text-lg font-bold text-white">
-      New operation
-      <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
-    </button>
+<!-- top-form.component.html -->
+ 
+<div class="p-4 bg-gray-100 rounded-lg shadow mb-4">
+  <h2 class="text-lg font-bold mb-4">Add New Operation</h2>
+  <form>
+    <div class="mb-4">
+      <label for="data-type" class="block text-sm font-medium text-gray-700 mb-2">Type of Data</label>
+      <select id="data-type" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+        <option value="option1">Numbers</option>
+        <option value="option2" selected>List of Projects</option>
+        <option value="option3">List of Tasks</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label for="input2" class="block text-sm font-medium text-gray-700 mb-2">Operation</label>
+      <input type="text" id="input2" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+    </div>
+    <button type="submit" class="py-2 px-4 bg-blue-500 text-xs font-bold text-white rounded-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Add</button>
+  </form>
+</div>
+
+<div class="bg-gray-100 p-4 rounded-lg shadow mb-4">
+  <h2 class="text-lg font-bold mb-4">Available Operations</h2>
+  <div class="overflow-x-auto">
+    <table class="border-collapse w-full">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="p-3 text-gray-600 text-left">Operation</th>
+          <th class="p-3 text-gray-600 text-left">Values Type</th>
+          <th class="p-3 text-gray-600 text-left">Description</th>
+          <th class="p-3 text-gray-600 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white hover:bg-gray-100">
+          <td class="p-3 text-gray-800 text-left">A + B + C</td>
+          <td class="p-3 text-gray-800 text-left">Project List</td>
+          <td class="p-3 text-gray-800 text-left">Merge all projects</td>
+          <td class="p-3 text-gray-800 text-left">
+            <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+            <span class="px-2">|</span>
+            <a href="#" class="text-blue-400 hover:text-blue-600 underline">Evaluate</a>
+          </td>
+        </tr>
+        <!-- Aquí irían más filas si fuera necesario -->
+      </tbody>
+    </table>
   </div>
-<div class="overflow-hidden">
-<table class="min-w-full">
-  <thead class="bg-white border-b">
-    <tr>
-      <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-        #
-      </th>
-      <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-        First
-      </th>
-      <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-        Last
-      </th>
-      <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-        Handle
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="bg-gray-100 border-b">
-      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Mark
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Otto
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        @mdo
-      </td>
-    </tr>
-    <tr class="bg-white border-b">
-      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Jacob
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Dillan
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        @fat
-      </td>
-    </tr>
-    <tr class="bg-gray-100 border-b">
-      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Mark
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Twen
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        @twitter
-      </td>
-    </tr>    
-    <tr class="bg-white border-b">
-      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4</td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Bob
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        Dillan
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        @fat
-      </td>
-    </tr>
-    <tr class="bg-gray-100 border-b">
-      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5</td>
-      <td colspan="2" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
-        Larry the Bird
-      </td>
-      <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-        @twitter
-      </td>
-    </tr>
-  </tbody>
-</table>
+</div>
+
+<div class="bg-gray-100 p-4 rounded-lg shadow mb-4">
+  <h2 class="text-lg font-bold mb-4">Operation result</h2>
+  <div class="overflow-x-auto">
+      <p>No result found yet</p>
+  </div>
 </div>

@@ -10,5 +10,6 @@ import { RouterOutlet } from '@angular/router';
   imports:[SidebarComponent,RouterOutlet]
 })
 export class DashboardComponent {
+rightsideformComponent: any;
 
 }
