@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./operation.component.css'],
 })
 export class OperationComponent {
- 
-
+  
 }

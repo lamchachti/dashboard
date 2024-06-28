@@ -1,24 +1,6 @@
 <!-- top-form.component.html -->
  
-<div class="p-4 bg-gray-100 rounded-lg shadow mb-4">
-  <h2 class="text-lg font-bold mb-4">Add New Operation</h2>
-  <form>
-    <div class="mb-4">
-      <label for="data-type" class="block text-sm font-medium text-gray-700 mb-2">Type of Data</label>
-      <select id="data-type" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
-        <option value="option1">Numbers</option>
-        <option value="option2" selected>List of Projects</option>
-        <option value="option3">List of Tasks</option>
-      </select>
-    </div>
-    <div class="mb-4">
-      <label for="input2" class="block text-sm font-medium text-gray-700 mb-2">Operation</label>
-      <input type="text" id="input2" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
-    </div>
-    <button type="submit" class="py-2 px-4 bg-blue-500 text-xs font-bold text-white rounded-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Add</button>
-  </form>
-</div>
-
+<app-operation-form></app-operation-form>
 <div class="bg-gray-100 p-4 rounded-lg shadow mb-4">
   <h2 class="text-lg font-bold mb-4">Available Operations</h2>
   <div class="overflow-x-auto">

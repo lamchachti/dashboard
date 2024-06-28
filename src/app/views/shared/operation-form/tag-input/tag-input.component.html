@@ -1,0 +1,9 @@
+<!-- src/app/tag-input/tag-input.component.html -->
+<div class="flex flex-wrap items-center p-2 border rounded">
+    <div *ngFor="let tag of tags; let i = index" class="flex items-center bg-blue-500 text-white rounded-full px-2 py-1 mr-2 mb-2">
+      {{ tag }}
+      <button (click)="removeTag(i)" class="ml-2 bg-red-500 rounded-full px-2">x</button>
+    </div>
+    <input [(ngModel)]="tagInput" (keydown)="onKeydown($event)" placeholder="Add operation elements" class="flex-grow border-none outline-none p-1">
+  </div>
+  
