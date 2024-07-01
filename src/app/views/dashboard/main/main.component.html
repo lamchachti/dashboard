@@ -1,23 +1,66 @@
 <div class="flex flex-col">
   <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-      <div
-        class="flex  flex-col  space-y-6 bg-gray-100 px-4 sm:flex-row sm:space-x-6 sm:space-y-0 mt-8">
+      <div class="flex  flex-col  space-y-6 bg-gray-100 px-4 sm:flex-row sm:space-x-6 sm:space-y-0 mt-8">
         <div
           class="w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-xl">
           <h1 class="mt-2 text-center text-2xl font-bold text-blue-400">42</h1>
           <p class="my-4 text-center text-sm text-gray-500">Total project on Holded</p>
-        
+
         </div>
         <div
           class="w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-xl">
-          <h1 class="mt-2 text-center text-2xl font-bold text-blue-400">80</h1>
+          <h1 class="mt-2 text-center text-2xl font-bold text-blue-400">0</h1>
           <p class="my-4 text-center text-sm text-gray-500">Total projects on asana</p>
-          
+
+        </div>
+        <div
+          class="w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-xl">
+          <h1 class="mt-2 text-center text-2xl font-bold text-blue-400">0</h1>
+          <p class="my-4 text-center text-sm text-gray-500">Total projects on Pipline</p>
         </div>
       </div>
       <div class="mt-8">
-        <app-projects></app-projects>
+        <div class="overflow-hidden">
+          <h2 class="font-bold">All kpis</h2>
+          <table class="min-w-full">
+            <thead class="bg-white border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Erp
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Name
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Resource type
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Value
+                </th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr *ngFor="let kpi of kpis" class="bg-gray-100 border-b">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"> {{kpi.erp}} </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    {{kpi.name}}
+                  </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    {{kpi.value_type}}
+                  </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <ng-container *ngIf="kpi.value_type == 'projectlist'; else elseBlock">
+                      <button class="text-green-400 hover:text-blue-600 underline">View</button>
+                    </ng-container>
+                    <ng-template #elseBlock>
+                      <span class="text-red-400">{{kpi.value}}</span>
+                    </ng-template>
+                  </td>
+                </tr>     
+              </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

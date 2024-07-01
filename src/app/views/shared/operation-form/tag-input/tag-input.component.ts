@@ -9,10 +9,10 @@ export class TagInputComponent  {
   @Input() selectedDataType: any;
   tags: string[] = [];
   tagInput: string = '';
-  allowedKeywords: string[] = ['kpi:id4','kpi:id3','kpi:id2','+'];
+  allowedKeywords: string[] = ['id4','id3','id2','+'];
   operationData= ''
   addTag() {
-    if (this.tagInput && !this.tags.includes(this.tagInput ) && this.allowedKeywords.includes(this.tagInput)) {
+    if (this.tagInput && this.allowedKeywords.includes(this.tagInput)) {
       this.operationData+=this.tagInput
       this.tags.push(this.tagInput)
       this.tagInput = '';

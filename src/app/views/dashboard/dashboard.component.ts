@@ -9,7 +9,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./dashboard.component.css'],
   imports:[SidebarComponent,RouterOutlet]
 })
-export class DashboardComponent {
-rightsideformComponent: any;
+export class DashboardComponent { 
 
 }
