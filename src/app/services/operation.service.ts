@@ -16,4 +16,10 @@ export class OperationService {
   del(id:number):Observable<any> {
     return this.http.delete(`${this.apiUrl.baseUrl + '/' + this.apiUrl.services[1].name + '/' + this.apiUrl.services[1].endpoints[1] + '/' + id}`);
   }
+  add(operation:Operation){
+    console.log(operation)
+    return this.http.post(`${this.apiUrl.baseUrl + '/' + this.apiUrl.services[1].name + '/' + this.apiUrl.services[1].endpoints[2] + '/'}`,
+      operation
+    );
+  }
 }

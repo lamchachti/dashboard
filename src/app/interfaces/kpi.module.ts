@@ -1,7 +1,7 @@
 import { Project } from './project.module';
 export interface Kpi {
     id?:string,
-    name?:string,
+    name:string,
     value:Project[]// ...Task[]
     value_type?:string,
     erp?:string,

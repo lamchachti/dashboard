@@ -13,7 +13,8 @@ export const API ={
                     name:'operation',
                     endpoints:[
                                 'list',
-                                'del'
+                                'del',
+                                'add'
                             ]
                 }
                 // other services 

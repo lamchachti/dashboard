@@ -13,7 +13,7 @@ export class OperationComponent implements OnInit{
   constructor(private operationService:OperationService){}
   ngOnInit(): void {
     this.operationService.getList().subscribe(
-      response => {
+      response => { 
         this.operations= response;
       })
   }
